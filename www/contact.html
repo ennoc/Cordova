@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval';
+style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;connect-src http://*">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1,
+maximum-scale=1, minimum-scale=1,
+width=device-width">
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+    <!--link rel="stylesheet" type="text/css" href="css/index.css"-->
+    <title>Hello World</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Contacts Greta</a>
+            </div>
+            <ul class="nav navbar-nav">
+
+                <li class="active"><a href="index.html">Accueil</a></li>
+                <li class="active"><a href="liste_contacts.html">Liste des contacts</a></li>
+              
+                
+            </ul>
+        </div>
+    </nav>
+
+    <div class="tab-content">
+        <form class="form-horizontal" role="form" id="contactform" method="POST" accept-charset="utf-8"
+            action="/modifierMonProfil">
+            <div class="form-group">
+                <label for="titre" class="col-sm-2 control-label">Titre/Name/Firstname : </label>
+                <div class="col-sm-2">
+                    <select class="form-control" id="titre" name="titre" required="required">
+                        <option value="M" selected="">Monsieur</option>
+                        <option value="Mme">Madame</option>
+                        <option value="Mlle">Mademoiselle</option>
+                    </select>
+                </div>
+                <div class="col-sm-4">
+                    <input class="form-control" id="nom" placeholder="Name" value="" name="nom" type="text">
+                </div>
+                <div class="col-sm-4">
+                    <input class="form-control" id="prenom" placeholder="Firstname" value="" name="prenom" type="text">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="adresse1" class="col-sm-2 control-label">Adress 1 : </label>
+                <div class="col-sm-10">
+                    <input class="form-control" id="adresse1" placeholder="Primary adress" value="" name="adresse1"
+                        type="text">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="adresse2" class="col-sm-2 control-label">Adress 2 : </label>
+                <div class="col-sm-10">
+                    <input class="form-control" id="adresse2" placeholder="Additionnal adress" value="" name="adresse2"
+                        type="text">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="code_postal" class="col-sm-2 control-label">Zip Code : </label>
+                <div class="col-sm-2">
+                    <input class="form-control" id="code_postal" placeholder="Zip Code" value="" name="code_postal"
+                        type="text">
+                </div>
+                <label for="ville" class="col-sm-2 control-label">City : </label>
+                <div class="col-sm-6">
+                    <input class="form-control" id="ville" placeholder="City" value="" name="ville" type="text">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputName" class="col-sm-2 control-label">Phone</label>
+                <div class="col-sm-5">
+                    <input class="form-control" name="tel_modile" id="tel_modile" type="text">
+                </div>
+                <label for="inputName" class="col-sm-2 control-label">Phone</label>
+                <div class="col-sm-5">
+                    <input class="form-control" name="tel_fixe" id="tel_fixe" type="text">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="email" class="col-sm-2 control-label">Email</label>
+                <div class="col-sm-5">
+                    <div class="input-group"><span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                        <input class="form-control" name="email" id="email" value="" type="email">
+                    </div>
+                </div>
+                <div class="col-sm-5">
+                    <div class="input-group"><span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                        <input class="form-control" name="email2" id="email2" value="" type="email">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                        <button class="btn btn-primary" id="btn_contact" name="button" type="submit" >Enregistrer contact</button>
+                </div>
+            </div>
+        </form>
+        <!-- /.tab-pane -->
+    </div>
+    <!--script type="text/javascript" src="cordova.js"></script-->
+    <script type="text/javascript" src="js/contact.js"></script>
+</body>
